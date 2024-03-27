@@ -1,16 +1,41 @@
-# This is a sample Python script.
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+class Animals:
+    def __init__(self):
+        self.name = "name"
+        print("Класс животное")
+    def golos(self):
+        print("Мяу Мяу")
+    def ability(self):
+        print("Котик бегает и играет")
 
+class Cat(Animals):
+    def __init__(self):
+        Animals.__init__(self)
+        self.say = "Мяу"
+    def golos(self):
+        return print(self.say)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+cat = Cat()
+cat.say = "Мррррр"
+cat.golos()
+cat.ability()
 
+print()
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# stack = []
+#
+# def push(val):
+#     stack.append(val)
+#
+# def pop():
+#     val = stack[-1]
+#     del stack[-1]
+#     return val
+#
+# push(3)
+# push(2)
+# push(1)
+#
+# print(pop())
+# print(pop())
+# print(pop())
